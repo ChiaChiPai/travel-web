@@ -281,6 +281,7 @@ export default defineConfig({
         '"Courier New"',
         "monospace",
       ],
+      tc: ["Noto Sans TC"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
