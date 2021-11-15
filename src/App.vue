@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="mx-auto w-[100vw] relative">
+  <div class="mx-auto w-auto relative">
     <NavBar />
     <router-view />
     <Footer />
