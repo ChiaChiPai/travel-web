@@ -1,3 +1,10 @@
+<script setup>
+</script>
+
 <template>
-  <router-view />
+  <div class="mx-auto w-[100vw] relative">
+    <NavBar />
+    <router-view />
+    <Footer />
+  </div>
 </template>
