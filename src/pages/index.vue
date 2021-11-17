@@ -1,15 +1,38 @@
 <script setup>
 import { ref } from "vue"
 import indexBanner from "../assets/images/bg_index.png"
+import cardFood from "../assets/images/card_food.png"
+import cardInspect from "../assets/images/card_inspect.png"
+import cardAccommodation from "../assets/images/card_accommodation.png"
+import cardTraffic from "../assets/images/card_traffic.png"
 
 const indexBannerImg = `background-image: url(${indexBanner});`
+const cardMenu = [
+  {  
+    img: cardInspect,
+    title: '景點',
+  },
+  {  
+    img: cardFood,
+    title: '美食',
+  },
+  {  
+    img: cardAccommodation,
+    title: '住宿',
+  },
+  {  
+    img: cardTraffic,
+    title: '交通',
+  },
+]
+
 
 const count = ref(0)
 </script>
 
 <template>
   <div
-    class="bg-cover bg-no-repeat w-[100%] absolute"
+    class="bg-cover bg-no-repeat bg-bottom w-[100%]"
     :style="indexBannerImg"
   >
     <img
@@ -27,10 +50,10 @@ const count = ref(0)
     />
     <p
       class="
-        mt-[54.4531vw]
         text-center
         mb-[3.9vw]
         transform
+        pt-[54.4531vw]
         bottom-[15.97vw]
         text-[rgba(0,0,0,0.5)]
         leading-[1.4]
@@ -39,8 +62,18 @@ const count = ref(0)
       台灣許多美景媲美國外，值此五倍券、國旅券及觀光業者加碼優惠盡出之際，旅行台灣就是現在！<br />
       到哪裡旅遊還沒有想法的民眾，歡迎到台灣觀光，體驗「台灣之美」!
     </p>
-    <IndexWeather />
+    <IndexWeather class="pb-[62px]" />
   </div>
+  <ul class="flex mb-[55px] justify-center">
+    <li v-for="card in cardMenu" :key="card.title" :style="`background-image: url(${card.img});`" class="bg-cover bg-no-repeat h-[390px] mx-[18.5px] w-[285px] relative">
+      <p class="font-weight font-bold top-[15px] right-[16px] text-[30px] leading-[43px] w-[30px] absolute">{{ card.title }}</p>
+    </li>
+  </ul>
+  
+  <GlobalSubtitle class="bg-[#6E9292]" :title="`熱門景點`"/>
+  <GlobalSubtitle class="bg-[#738677]" :title="`熱門美食`"/>
+  <GlobalSubtitle class="bg-[#C2BB96]" :title="`住宿推薦`"/>
+
 </template>
 
 <style lang="postcss">
