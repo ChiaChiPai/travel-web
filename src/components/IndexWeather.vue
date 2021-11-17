@@ -20,7 +20,7 @@ SwiperCore.use([Navigation]);
 <template>
   <div class="mx-auto max-w-1060px relative">
     <swiper :navigation="true" :slidesPerView="8" class="swiper-costom">
-      <swiper-slide v-for="item in 10">
+      <swiper-slide v-for="item in 10" :key="item">
         <div class="flex flex-col text-lg items-center">
           <div class="mb-12px ">台北市</div>
           <img class="mb-[14px] max-w-[5.3125vw]" src="@/assets/images/icon_night-ring.png" alt="">
