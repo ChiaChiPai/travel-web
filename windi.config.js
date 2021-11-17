@@ -4,6 +4,7 @@ import { defineConfig } from "windicss/helpers";
 export default defineConfig({
   darkMode: false, // or 'media' or 'class'
   attributify: true,
+  preflight: true,
   theme: {
     screens: {
       sm: "640px",
