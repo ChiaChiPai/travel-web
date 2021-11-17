@@ -9,7 +9,9 @@
     "format": "prettier .  --write"
   },
   "dependencies": {
+    "swiper": "^7.2.0",
     "vue": "^3.2.16",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2",
     "yarn": "^1.22.17"
