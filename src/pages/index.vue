@@ -1,40 +1,40 @@
 <script setup>
-import { ref } from "vue"
-import indexBanner from "../assets/images/bg_index.png"
-import cardFood from "../assets/images/card_food.png"
-import cardInspect from "../assets/images/card_inspect.png"
-import cardAccommodation from "../assets/images/card_accommodation.png"
-import cardTraffic from "../assets/images/card_traffic.png"
+import { ref } from "vue";
+import indexBanner from "../assets/images/bg_index.png";
+import cardFood from "../assets/images/card_food.png";
+import cardInspect from "../assets/images/card_inspect.png";
+import cardAccommodation from "../assets/images/card_accommodation.png";
+import cardTraffic from "../assets/images/card_traffic.png";
 
-const indexBannerImg = `background-image: url(${indexBanner});`
+const indexBannerImg = `background-image: url(${indexBanner});`;
 const cardMenu = [
-  {  
+  {
     img: cardInspect,
-    title: '景點',
+    title: "景點",
   },
-  {  
+  {
     img: cardFood,
-    title: '美食',
+    title: "美食",
   },
-  {  
+  {
     img: cardAccommodation,
-    title: '住宿',
+    title: "住宿",
   },
-  {  
+  {
     img: cardTraffic,
-    title: '交通',
+    title: "交通",
   },
-]
+];
 
+const vw = (px) => {
+  return (px / 1280) * 100 + "vw";
+};
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
-  <div
-    class="bg-cover bg-no-repeat bg-bottom w-[100%]"
-    :style="indexBannerImg"
-  >
+  <div class="bg-cover bg-no-repeat bg-bottom w-[100%]" :style="indexBannerImg">
     <img
       class="
         transform
@@ -65,16 +65,53 @@ const count = ref(0)
     <IndexWeather class="pb-[62px]" />
   </div>
   <ul class="flex mb-[55px] justify-center">
-    <li v-for="card in cardMenu" :key="card.title" :style="`background-image: url(${card.img});`" class="bg-cover bg-no-repeat h-[390px] mx-[18.5px] w-[285px] relative">
-      <p class="font-weight font-bold top-[15px] right-[16px] text-[30px] leading-[43px] w-[30px] absolute">{{ card.title }}</p>
+    <li
+      v-for="card in cardMenu"
+      :key="card.title"
+      :style="`background-image: url(${card.img});`"
+      class="bg-cover bg-no-repeat h-[390px] mx-[18.5px] w-[285px] relative"
+    >
+      <p
+        class="
+          font-weight font-bold
+          top-[15px]
+          right-[16px]
+          text-[30px]
+          leading-[43px]
+          w-[30px]
+          absolute
+        "
+      >
+        {{ card.title }}
+      </p>
     </li>
   </ul>
-  
-  <GlobalSubtitle class="bg-[#6E9292]" :title="`熱門景點`"/>
-  <GlobalSubtitle class="bg-[#738677]" :title="`熱門美食`"/>
-  <GlobalSubtitle class="bg-[#C2BB96]" :title="`住宿推薦`"/>
 
+  <GlobalSubtitle class="bg-[#6E9292] mb-[79px]" :title="`熱門景點`" />
+  <div class="flex justify-center">
+    <ImageCard />
+    <ImageCard class="mx-[35px]" />
+    <ImageCard />
+  </div>
+
+  <GlobalSubtitle
+    class="bg-[#738677] mt-[90px] mb-[79px]"
+    :title="`熱門美食`"
+  />
+  <div class="flex justify-center">
+    <TextCard />
+    <TextCard class="mx-[35px]" />
+    <TextCard />
+  </div>
+  <GlobalSubtitle
+    class="bg-[#C2BB96] mt-[90px] mb-[79px]"
+    :title="`住宿推薦`"
+  />
+  <div class="flex justify-center">
+    <TextCard />
+    <TextCard class="mx-[35px]" />
+    <TextCard />
+  </div>
 </template>
 
-<style lang="postcss">
-</style>
+<style lang="postcss"></style>
