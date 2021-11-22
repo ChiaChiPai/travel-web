@@ -87,30 +87,24 @@ const count = ref(0);
     </li>
   </ul>
 
-  <GlobalSubtitle class="bg-[#6E9292] mb-[79px]" :title="`熱門景點`" />
-  <div class="flex justify-center">
-    <ImageCard />
-    <ImageCard class="mx-[35px]" />
-    <ImageCard />
+  <GlobalSubtitle class="bg-[#6E9292]" :title="`熱門景點`" />
+  <div class="flex justify-center pt-[79px]">
+    <CardImage />
+    <CardImage class="mx-[35px]" />
+    <CardImage />
   </div>
 
-  <GlobalSubtitle
-    class="bg-[#738677] mt-[90px] mb-[79px]"
-    :title="`熱門美食`"
-  />
-  <div class="flex justify-center">
-    <TextCard />
-    <TextCard class="mx-[35px]" />
-    <TextCard />
+  <GlobalSubtitle class="bg-[#738677] mt-[90px]" :title="`熱門美食`" />
+  <div class="flex justify-center pt-[79px]">
+    <CardText />
+    <CardText class="mx-[35px]" />
+    <CardText />
   </div>
-  <GlobalSubtitle
-    class="bg-[#C2BB96] mt-[90px] mb-[79px]"
-    :title="`住宿推薦`"
-  />
-  <div class="flex justify-center">
-    <TextCard />
-    <TextCard class="mx-[35px]" />
-    <TextCard />
+  <GlobalSubtitle class="bg-[#C2BB96] mt-[90px]" :title="`住宿推薦`" />
+  <div class="flex justify-center pt-[79px]">
+    <CardText />
+    <CardText class="mx-[35px]" />
+    <CardText />
   </div>
 </template>
 

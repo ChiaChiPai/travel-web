@@ -8,7 +8,7 @@
       border-[2px] border-[rgba(0,
       0, 0,
       0.3)]
-      rounded-2xl
+      rounded-[30px]
       overflow-hidden
       relative
     "
