@@ -30,7 +30,7 @@ const navList = [
 </script>
 
 <template>
-  <div class="veiwpoint-bg w-[100vw] h-376px flex justify-center pt-72px">
+  <div class="veiwpoint-bg flex justify-center pt-72px pb-58px">
     <ul v-for="nav in navList" :key="nav.title" class="footer-title mx-50px">
       <h3 class="font-700 text-28px leading-39px mb-18px">
         {{ nav.title }}
