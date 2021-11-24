@@ -44,8 +44,7 @@ const attraction = `background-image: url(${attractionBanner});`;
     </div>
   </div>
   <!-- <AttractionIndex /> -->
-  <!-- <AttractionArea /> -->
-  <AttractionResult />
+  <AttractionArea />
 </template>
 
 <style lang="postcss">
