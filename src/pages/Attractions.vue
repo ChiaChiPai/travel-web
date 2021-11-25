@@ -2,6 +2,17 @@
 import attractionBanner from "../assets/images/attraction_banner.jpg";
 
 const attraction = `background-image: url(${attractionBanner});`;
+
+const AttractionIndex = ref(
+  defineAsyncComponent(() => import("../components/AttractionIndex.vue"))
+);
+const AttractionArea = ref(
+  defineAsyncComponent(() => import("../components/AttractionArea.vue"))
+);
+const tab = ref(AttractionIndex);
+const changeTab = (component) => {
+  tab.value = component;
+};
 </script>
 
 <template>
@@ -43,8 +54,11 @@ const attraction = `background-image: url(${attractionBanner});`;
       <img src="@/assets/images/btn_search.png" alt="" />
     </div>
   </div>
-  <!-- <AttractionIndex /> -->
-  <AttractionArea />
+  <button
+    class="w-100px h-100px bg-black"
+    @click="changeTab(AttractionArea)"
+  ></button>
+  <component :is="tab" />
 </template>
 
 <style lang="postcss">
