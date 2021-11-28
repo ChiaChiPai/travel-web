@@ -124,4 +124,10 @@ const introList = [
 .delicacy-intro {
   background: linear-gradient(180deg, #a7b4aa 0%, rgba(167, 180, 170, 0) 100%);
 }
+
+.search-bar::after {
+  content: "";
+  background: url(@/assets/svg/icon_search.svg) no-repeat;
+  @apply w-22px h-22px bg-cover absolute right-13px top-15px;
+}
 </style>
