@@ -7,8 +7,8 @@
   <div class="attraction-intro mb-8px">
     <AttractionIntro />
   </div>
-  <div class="flex max-w-1280px mx-auto pl-43px pr-89px pb-27px">
-    <div class="w-[50.9375%] border-r-gray-600">
+  <div class="flex justify-between max-w-1280px mx-auto pb-27px">
+    <div class="w-[50%] border-r-gray-600">
       <h2 class="font-700 text-48px leading-68px mb-32px">景點資訊</h2>
       <dl class="info mb-51px">
         <dt>地址</dt>
@@ -44,7 +44,8 @@
         <li>周邊住宿</li>
       </ul>
     </div>
-    <div class="pl-63px border-l-2px border-[rgba(0,0,0,0.5)]">
+    <div class="w-2px bg-[rgba(0,0,0,0.5)]"></div>
+    <div class="">
       <h3
         class="
           text-32px
