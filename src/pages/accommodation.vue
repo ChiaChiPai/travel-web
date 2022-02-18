@@ -94,6 +94,10 @@ const Accommodation = `background-image: url(${AccommodationBanner});`;
           ２位成人，1間房間
         </div>
       </li>
+      <li>
+        <SvgIcon name="magnifier"></SvgIcon>
+        搜尋
+      </li>
     </ul>
   </div>
 </template>

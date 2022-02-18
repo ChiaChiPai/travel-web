@@ -107,17 +107,6 @@ const introList = [
   </div>
 
   <PaginationGroup class="justify-center mb-28px" />
-
-  <GlobalSubtitle
-    :title="`網紅必推美食`"
-    :is-show-more="false"
-    class="bg-[#738677] mb-41px"
-  />
-  <div class="flex justify-center pt-[79px] pb-[90px]">
-    <CardAvatar />
-    <CardAvatar class="mx-[35px]" />
-    <CardAvatar />
-  </div>
 </template>
 
 <style>

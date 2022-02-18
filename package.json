@@ -26,6 +26,7 @@
     "unplugin-vue-components": "^0.17.2",
     "vite": "^2.6.4",
     "vite-plugin-pages": "^0.18.2",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vite-plugin-windicss": "^1.5.1",
     "windicss": "^3.2.1"
   }
