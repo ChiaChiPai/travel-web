@@ -8,6 +8,6 @@ module.exports = {
   ],
   rules: {
     // override/add rules settings here, such as:
-    "vue/no-multiple-template-root": "off",
+    "vue/no-multiple-template-root": "off"
   },
 };
